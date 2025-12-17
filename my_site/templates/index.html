@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{% block title %}LabHealth – Точні аналізи за 4–24 години{% endblock %}
+
+{% block content %}
+
+<!-- ========== ГЕРОЙ-БЛОК ========== -->
+<section class="hero-main">
+	<div class="container">
+		<h1>Точні аналізи<br>за 4–24 години</h1>
+		<p class="hero-subtitle">Понад 1000 досліджень • Онлайн-запис • Результати в особистому кабінеті</p>
+		<div class="hero-buttons">
+			<a href="/appointment" class="btn btn-primary">Записатися онлайн</a>
+			<a href="/services" class="btn btn-outline">Усі послуги</a>
+		</div>
+		<div class="hero-stats">
+			<div><strong>500 000+</strong><br>задоволених клієнтів</div>
+			<div><strong>99,9%</strong><br>точність аналізів</div>
+			<div><strong>50+</strong><br>досвідчених лікарів</div>
+		</div>
+	</div>
+</section>
+
+<!-- ========== ПЕРЕВАГИ З ЛАБОРАТОРНИМИ ЕМОДЗІ ========== -->
+<section style="padding:130px 20px; background:#121212;">
+	<div style="max-width:1400px; margin:0 auto; text-align:center;">
+		<h2 style="color:#00eaff; font-size:3.2em; margin-bottom:20px; font-weight:700;">
+			Переваги LabHealth
+		</h2>
+		<p style="color:#bbb; font-size:1.35em; max-width:900px; margin:0 auto 80px;">
+			Ми не просто робимо аналізи — ми дбаємо про ваше здоров'я на кожному кроці
+		</p>
+
+		<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:45px;">
+
+			<!-- Перевага 1 — Швидкість -->
+			<div
+				style="background:linear-gradient(145deg, #1a1a1a, #131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; position:relative; overflow:hidden;">
+				<div style="font-size:6rem; margin-bottom:25px;">⏱️</div>
+				<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Швидкі результати</h3>
+				<p style="color:#ccc; font-size:1.15em; line-height:1.7;">
+					90 % аналізів — за 4–24 години<br>
+					Результати автоматично в особистому кабінеті та на email
+				</p>
+			</div>
+
+			<!-- Перевага 2 — Точність і обладнання -->
+			<div
+				style="background:linear-gradient(145deg, #1a1a1a, #131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; position:relative; overflow:hidden;">
+				<div style="font-size:6rem; margin-bottom:25px;">🔬</div>
+				<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Найсучасніше обладнання</h3>
+				<p style="color:#ccc; font-size:1.15em; line-height:1.7;">
+					Roche, Siemens, Abbott, Sysmex<br>
+					Точність 99,9% • Сертифікат ISO 15189
+				</p>
+			</div>
+
+			<!-- Перевага 3 — Виїзд додому -->
+			<div
+				style="background:linear-gradient(145deg, #1a1a1a, #131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; position:relative; overflow:hidden;">
+				<div style="font-size:6rem; margin-bottom:25px;">🏥</div>
+				<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Виїзд додому</h3>
+				<p style="color:#ccc; font-size:1.15em; line-height:1.7;">
+					Забір аналізів у зручний для вас час<br>
+					По Києву та передмістю • від 300 ₴
+				</p>
+			</div>
+
+		</div>
+
+		<div style="margin-top:90px;">
+			<a href="/appointment" class="btn"
+				style="font-size:1.6em; padding:22px 70px; background:#00ffaa; color:#121212; border-radius:60px;">
+				Записатися зараз →
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- ========== ПОПУЛЯРНІ АНАЛІЗИ — SVG ІКОНКИ (ПРАЦЮЄ НАЗАВЖДИ) ========== -->
+<section style="padding:140px 20px; background:linear-gradient(to bottom, #0d1f26, #121212);">
+	<div style="max-width:1400px; margin:0 auto; text-align:center;">
+		<h2 style="color:#00eaff; font-size:3.2em; margin-bottom:20px; font-weight:700;">
+			Популярні аналізи
+		</h2>
+		<p style="color:#bbb; font-size:1.35em; max-width:900px; margin:0 auto 80px;">
+			Найчастіше замовляють наші клієнти
+		</p>
+
+		<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:45px;">
+
+			<!-- Загальний аналіз крові -->
+			<a href="/appointment?service=Загальний аналіз крові" style="text-decoration:none; color:inherit;">
+				<div
+					style="background:linear-gradient(145deg,#1a1a1a,#131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+					<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00d8ff" stroke-width="1.5"
+						style="margin-bottom:25px;">
+						<path d="M19.5 12c0 4.14-4 7.5-9 7.5S1.5 16.14 1.5 12 5.5 4.5 10.5 4.5 19.5 7.86 19.5 12z" />
+						<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+						<path d="M12 2v2.5" />
+					</svg>
+					<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Загальний аналіз крові</h3>
+					<p style="color:#ccc; font-size:1.15em;">Розгорнутий — 28 показників</p>
+					<div style="color:#00ffaa; font-size:2.4em; font-weight:bold; margin:20px 0;">250 ₴</div>
+					<span
+						style="color:#00d8ff; background:rgba(0,216,255,0.15); padding:10px 25px; border-radius:50px;">Результат
+						за 4 години</span>
+				</div>
+			</a>
+
+			<!-- Біохімія -->
+			<a href="/appointment?service=Біохімічний аналіз крові" style="text-decoration:none; color:inherit;">
+				<div
+					style="background:linear-gradient(145deg,#1a1a1a,#131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+					<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00d8ff" stroke-width="1.5"
+						style="margin-bottom:25px;">
+						<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+						<polyline points="17 21 17 13 7 13 7 21" />
+						<polyline points="7 3 7 8 15 8" />
+					</svg>
+					<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Біохімія крові</h3>
+					<p style="color:#ccc; font-size:1.15em;">Печінка • Нирки • Ліпіди • Глюкоза</p>
+					<div style="color:#00ffaa; font-size:2.4em; font-weight:bold; margin:20px 0;">від 380 ₴</div>
+					<span
+						style="color:#00d8ff; background:rgba(0,216,255,0.15); padding:10px 25px; border-radius:50px;">Результат
+						за 6 годин</span>
+				</div>
+			</a>
+
+			<!-- Гормони -->
+			<a href="/appointment?service=Гормональні аналізи" style="text-decoration:none; color:inherit;">
+				<div
+					style="background:linear-gradient(145deg,#1a1a1a,#131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+					<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00d8ff" stroke-width="1.5"
+						style="margin-bottom:25px;">
+						<circle cx="12" cy="12" r="10" />
+						<path d="M8 14s1.5 2 4 2 4-2 4-2" />
+						<path d="M9 9h.01" />
+						<path d="M15 9h.01" />
+					</svg>
+					<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Гормони щитовидної залози</h3>
+					<p style="color:#ccc; font-size:1.15em;">ТТГ • Т4 вільний • АТ-ТПО</p>
+					<div style="color:#00ffaa; font-size:2.4em; font-weight:bold; margin:20px 0;">520 ₴</div>
+					<span
+						style="color:#00d8ff; background:rgba(0,216,255,0.15); padding:10px 25px; border-radius:50px;">Результат
+						за 24 години</span>
+				</div>
+			</a>
+
+			<!-- ПЛР -->
+			<a href="/appointment?service=ПЛР-тестування" style="text-decoration:none; color:inherit;">
+				<div
+					style="background:linear-gradient(145deg,#1a1a1a,#131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+					<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00d8ff" stroke-width="1.5"
+						style="margin-bottom:25px;">
+						<circle cx="12" cy="12" r="10" />
+						<path d="M8 12h8" />
+						<path d="M12 8v8" />
+					</svg>
+					<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">ПЛР на 12 інфекцій</h3>
+					<p style="color:#ccc; font-size:1.15em;">Висока чутливість</p>
+					<div style="color:#00ffaa; font-size:2.4em; font-weight:bold; margin:20px 0;">850 ₴</div>
+					<span
+						style="color:#00d8ff; background:rgba(0,216,255,0.15); padding:10px 25px; border-radius:50px;">Результат
+						за 5 годин</span>
+				</div>
+			</a>
+
+			<!-- Вітамін D -->
+			<a href="/appointment?service=Вітамін D" style="text-decoration:none; color:inherit;">
+				<div
+					style="background:linear-gradient(145deg,#1a1a1a,#131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+					<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00d8ff" stroke-width="1.5"
+						style="margin-bottom:25px;">
+						<circle cx="12" cy="12" r="5" />
+						<path d="M12 1v2" />
+						<path d="M12 21v2" />
+						<path d="M4.22 4.22l1.42 1.42" />
+						<path d="M18.36 18.36l1.42 1.42" />
+						<path d="M1 12h2" />
+						<path d="M21 12h2" />
+						<path d="M4.22 19.78l1.42-1.42" />
+						<path d="M18.36 5.64l1.42-1.42" />
+					</svg>
+					<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Вітамін D (25-ОН)</h3>
+					<p style="color:#ccc; font-size:1.15em;">Перевірте свій рівень</p>
+					<div style="color:#00ffaa; font-size:2.4em; font-weight:bold; margin:20px 0;">390 ₴</div>
+					<span
+						style="color:#00d8ff; background:rgba(0,216,255,0.15); padding:10px 25px; border-radius:50px;">Результат
+						за 24 години</span>
+				</div>
+			</a>
+
+			<!-- Пакет -->
+			<a href="/appointment?service=Пакет Здоров'я" style="text-decoration:none; color:inherit;">
+				<div
+					style="background:linear-gradient(145deg,#1a1a1a,#131313); border-radius:32px; padding:60px 40px; border:1px solid rgba(0,255,255,0.15); transition:all .4s; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+					<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#00d8ff" stroke-width="1.5"
+						style="margin-bottom:25px;">
+						<path d="M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2z" />
+						<path d="M12 8v4" />
+						<path d="M12 16h.01" />
+					</svg>
+					<h3 style="color:#00eaff; font-size:1.8em; margin:15px 0;">Пакет «Здоров'я 360»</h3>
+					<p style="color:#ccc; font-size:1.15em;">60+ показників • Знижка 25%</p>
+					<div style="color:#00ffaa; font-size:2.4em; font-weight:bold; margin:20px 0;">від 1490 ₴</div>
+					<span
+						style="color:#00d8ff; background:rgba(0,216,255,0.15); padding:10px 25px; border-radius:50px;">Результат
+						за 1–2 дні</span>
+				</div>
+			</a>
+
+		</div>
+
+		<div style="margin-top:90px;">
+			<a href="/services" class="btn"
+				style="font-size:1.6em; padding:22px 70px; background:#00ffaa; color:#121212; border-radius:60px;">
+				Усі 1000+ аналізів →
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- ========== ВІДГУКИ ========== -->
+<section style="padding: 120px 20px; background: #121212;">
+	<h2 class="section-title">Відгуки наших клієнтів</h2>
+
+	<div class="reviews-slider">
+		<div class="review active">
+			<p>«Дуже швидко отримала результати онлайн. Все зрозуміло і зручно!»</p>
+			<strong>— Анна К., Київ</strong>
+		</div>
+		<div class="review">
+			<p>«Приємний персонал, чисто, без черг. Рекомендую всім!»</p>
+			<strong>— Олександр П., Львів</strong>
+		</div>
+		<div class="review">
+			<p>«Найточніші аналізи на гормони, які я коли-небудь робила»</p>
+			<strong>— Юлія М., Одеса</strong>
+		</div>
+		<div class="review">
+			<p>«Здав ПЛР перед поїздкою — результат за 4 години. Супер!»</p>
+			<strong>— Ігор С., Харків</strong>
+		</div>
+		<div class="review">
+			<p>«Викликали додому — все швидко і професійно. Дякую!»</p>
+			<strong>— Марина Д., Бровари</strong>
+		</div>
+	</div>
+</section>
+
+<!-- JS для відгуків (автопрокрутка) -->
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const reviews = document.querySelectorAll('.reviews-slider .review');
+		let current = 0;
+		setInterval(() => {
+			reviews[current].classList.remove('active');
+			current = (current + 1) % reviews.length;
+			reviews[current].classList.add('active');
+		}, 6000);
+	});
+</script>
+
+{% endblock %}

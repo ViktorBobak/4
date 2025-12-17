@@ -1,0 +1,987 @@
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	background-color: #121212;
+	color: #eee;
+}
+
+/* Header */
+header {
+	background-color: #1f1f1f;
+	padding: 15px 0;
+}
+
+header .container {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header h1 {
+	color: #00d8ff;
+	margin: 0;
+}
+
+nav a {
+	color: #eee;
+	margin-left: 20px;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+	background-color: #00d8ff;
+	color: #121212;
+}
+
+/* Hero */
+/* ========== ГОЛОВНА — НОВИЙ ДИЗАЙН 2025 ========== */
+.hero-main {
+	background: linear-gradient(135deg, #0f1f26 0%, #121212 100%);
+	padding: 120px 20px 100px;
+	text-align: center;
+	color: #eee;
+}
+
+.hero-main h1 {
+	font-size: 3.5em;
+	color: #00eaff;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+
+.hero-subtitle {
+	font-size: 1.4em;
+	margin: 25px 0 40px;
+	color: #ccc;
+}
+
+.hero-buttons {
+	margin: 40px 0;
+}
+
+.btn-primary {
+	background: #00d8ff;
+	color: #121212;
+	padding: 16px 36px;
+	font-size: 1.3em;
+	border-radius: 50px;
+}
+
+.btn-outline {
+	border: 2px solid #00d8ff;
+	color: #00d8ff;
+	margin-left: 15px;
+}
+
+.hero-stats {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	margin-top: 60px;
+	font-size: 1.3em;
+}
+
+.hero-stats strong {
+	color: #00ffaa;
+	font-size: 1.5em;
+	display: block;
+}
+
+.features-modern {
+	padding: 100px 20px;
+	background: #121212;
+}
+
+.section-title {
+	font-size: 2.5em;
+	text-align: center;
+	color: #00eaff;
+	margin-bottom: 60px;
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.feature-box {
+	background: #1a1a1a;
+	padding: 40px 25px;
+	border-radius: 20px;
+	text-align: center;
+	border: 1px solid rgba(0, 255, 255, 0.15);
+	transition: 0.4s;
+}
+
+.feature-box:hover {
+	transform: translateY(-12px);
+	border-color: #00d8ff;
+	box-shadow: 0 20px 40px rgba(0, 216, 255, 0.2);
+}
+
+.feature-box .icon {
+	font-size: 4rem;
+	margin-bottom: 20px;
+}
+
+.feature-box h3 {
+	color: #00eaff;
+	margin: 15px 0;
+}
+
+.services-preview {
+	padding: 100px 20px;
+	background: #0d1f26;
+}
+
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 25px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.service-card {
+	background: #1a1a1a;
+	padding: 30px;
+	border-radius: 18px;
+	text-align: center;
+	color: #eee;
+	border: 1px solid rgba(0, 255, 255, 0.15);
+	transition: 0.4s;
+	text-decoration: none;
+}
+
+.service-card:hover {
+	transform: translateY(-10px);
+	border-color: #00d8ff;
+}
+
+.service-card h3 {
+	color: #00eaff;
+	margin-bottom: 10px;
+}
+
+.service-card .price {
+	color: #00ffaa;
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-top: 15px;
+	display: block;
+}
+
+.reviews-short {
+	padding: 100px 20px;
+	background: #121212;
+}
+
+.reviews-short .reviews-slider {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.4em;
+	line-height: 1.8;
+}
+
+.reviews-short .review {
+	display: none;
+	animation: fade 1s;
+}
+
+.reviews-short .review.active {
+	display: block;
+}
+
+.reviews-short strong {
+	color: #00ffaa;
+	display: block;
+	margin-top: 20px;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+	.hero-main h1 {
+		font-size: 2.5em;
+	}
+
+	.hero-stats {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.hero-buttons {
+		flex-direction: column;
+	}
+
+	.btn-outline {
+		margin: 15px 0 0;
+	}
+}
+
+.btn {
+	background-color: #00d8ff;
+	color: #121212;
+	padding: 12px 25px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 25px;
+	transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+	transform: scale(1.05);
+	background-color: #00b0cc;
+}
+
+/* Feature cards */
+.features {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 50px 20px;
+}
+
+.feature-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #1f1f1f;
+	border-radius: 15px;
+	padding: 30px 20px;
+	width: 250px;
+	text-decoration: none;
+	color: #eee;
+	transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.feature-card:hover {
+	transform: translateY(-10px) scale(1.03);
+	box-shadow: 0 10px 25px rgba(0, 216, 255, 0.3);
+	background-color: #00d8ff;
+	color: #121212;
+}
+
+.feature-card .icon {
+	font-size: 50px;
+	margin-bottom: 15px;
+	transition: transform 0.3s;
+}
+
+.feature-card:hover .icon {
+	transform: scale(1.2);
+}
+
+/* Page sections */
+.page-section {
+	padding: 60px 20px;
+	text-align: center;
+}
+
+.page-section h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.page-section p,
+.page-section li {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/* Contact form */
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+form input,
+form textarea {
+	margin-bottom: 15px;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	width: 100%;
+}
+
+form input[type="date"],
+form input[type="time"] {
+	margin-bottom: 15px;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	width: 100%;
+}
+
+form label {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-align: left;
+}
+
+form select {
+	margin-bottom: 15px;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	width: 100%;
+	background-color: #fff;
+	color: #121212;
+}
+
+
+
+form button {
+	align-self: center;
+}
+
+/* Герой-блок для онлайн запису */
+.hero-appointment {
+	text-align: center;
+	padding: 80px 20px;
+	background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+	color: #00d8ff;
+}
+
+.hero-appointment h2 {
+	font-size: 2.5em;
+	margin-bottom: 15px;
+}
+
+.hero-appointment p {
+	font-size: 1.2em;
+	color: #eee;
+}
+
+/* Секція форми */
+.appointment-form-section {
+	display: flex;
+	justify-content: center;
+	padding: 50px 20px;
+}
+
+.appointment-form {
+	background-color: #1f1f1f;
+	padding: 40px;
+	border-radius: 20px;
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	box-shadow: 0 15px 35px rgba(0, 216, 255, 0.3);
+	color: #eee;
+}
+
+/* Поля форми */
+.appointment-form input,
+.appointment-form select {
+	padding: 12px;
+	border-radius: 10px;
+	border: 1px solid #333;
+	background-color: #2c2c2c;
+	color: #eee;
+	font-size: 1em;
+	width: 100%;
+}
+
+.appointment-form select {
+	appearance: none;
+}
+
+/* Дата та час */
+.appointment-form .datetime-group {
+	display: flex;
+	gap: 10px;
+}
+
+.appointment-form .datetime-group input {
+	flex: 1;
+}
+
+/* Кнопка запису */
+.appointment-form button {
+	background-color: #00d8ff;
+	color: #121212;
+	padding: 15px;
+	font-weight: bold;
+	border-radius: 50px;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s, background 0.3s;
+}
+
+.appointment-form button:hover {
+	transform: scale(1.05);
+	background-color: #00b0cc;
+}
+
+/* Підписи до select */
+.appointment-form label {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #eee;
+	text-align: left;
+}
+
+
+
+/* Footer */
+footer {
+	background-color: #1f1f1f;
+	text-align: center;
+	padding: 20px;
+	color: #bbb;
+}
+
+/* ===== Загальні блоки секцій ===== */
+.about-section {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 40px 20px;
+}
+
+/* ===== Розділи ===== */
+.about-title {
+	font-size: 2.6em;
+	color: #00eaff;
+	text-align: center;
+	margin: 30px 0 15px;
+	font-weight: 700;
+}
+
+/* ===== Переваги ===== */
+.about-block {
+	background: linear-gradient(145deg, #1a1a1a, #111);
+	padding: 30px;
+	border-radius: 18px;
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	box-shadow: 0 0 25px rgba(0, 234, 255, 0.15);
+	margin-bottom: 50px;
+	line-height: 1.7;
+	transition: 0.3s;
+}
+
+.about-block:hover {
+	box-shadow: 0 0 35px rgba(0, 234, 255, 0.35);
+	transform: translateY(-3px);
+}
+
+/* ===== Картки переваг ===== */
+.about-cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 25px;
+	margin: 50px 0;
+}
+
+.about-card {
+	width: 280px;
+	background: #131313;
+	padding: 25px;
+	border-radius: 18px;
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	box-shadow: 0 0 25px rgba(0, 234, 255, 0.15);
+	text-align: center;
+	transition: 0.35s;
+}
+
+.about-card:hover {
+	transform: translateY(-10px) scale(1.03);
+	border-color: #00eaff;
+	box-shadow: 0 0 40px rgba(0, 234, 255, 0.5);
+	background: #0d1f26;
+}
+
+.about-card h3 {
+	color: #00eaff;
+	margin-bottom: 8px;
+	font-size: 1.3em;
+}
+
+/* ===== Команда ===== */
+.team {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	margin: 40px 0 60px;
+}
+
+.team-member {
+	width: 280px;
+	background: linear-gradient(145deg, #1a1a1a, #111);
+	padding: 25px;
+	border-radius: 18px;
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	box-shadow: 0 0 25px rgba(0, 234, 255, 0.2);
+	text-align: center;
+	transition: 0.35s;
+}
+
+.team-member:hover {
+	transform: translateY(-10px) scale(1.03);
+	border-color: #00eaff;
+	box-shadow: 0 0 40px rgba(0, 234, 255, 0.45);
+}
+
+/* Фото-заглушка */
+.team-img {
+	width: 100%;
+	height: 170px;
+	border-radius: 12px;
+	background: radial-gradient(circle at center,
+			rgba(0, 234, 255, 0.25),
+			#1a1a1a 70%);
+	margin-bottom: 15px;
+	border: 1px solid rgba(0, 234, 255, 0.2);
+}
+
+/* Імена */
+.team-member h3 {
+	color: #00eaff;
+	font-size: 1.3em;
+	margin-bottom: 5px;
+}
+
+/* ===== Таймлайн ===== */
+.timeline {
+	margin: 40px auto;
+	border-left: 3px solid #00eaff;
+	padding-left: 25px;
+	max-width: 700px;
+}
+
+.timeline-item {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.timeline-item::before {
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #00eaff;
+	box-shadow: 0 0 15px #00eaff;
+	left: -31px;
+	top: 4px;
+}
+
+.timeline-item h3 {
+	color: #00eaff;
+	font-size: 1.3em;
+	margin-bottom: 5px;
+}
+
+/* ===== FAQ ===== */
+.faq {
+	max-width: 800px;
+	margin: 50px auto;
+}
+
+.faq-item {
+	background: #131313;
+	padding: 20px;
+	border-radius: 15px;
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	margin-bottom: 15px;
+	cursor: pointer;
+	box-shadow: 0 0 20px rgba(0, 234, 255, 0.15);
+	transition: 0.3s;
+}
+
+.faq-item:hover {
+	transform: scale(1.02);
+	box-shadow: 0 0 30px rgba(0, 234, 255, 0.4);
+}
+
+.faq-answer {
+	display: none;
+	color: #cfcfcf;
+	padding-top: 10px;
+	border-top: 1px solid #333;
+}
+
+/* Сітка послуг */
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 25px;
+	margin-top: 30px;
+}
+
+/* Картка послуги */
+.service-card {
+	background: rgba(255, 255, 255, 0.04);
+	padding: 25px;
+	border-radius: 14px;
+	border: 1px solid rgba(0, 255, 255, 0.1);
+	box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+	text-decoration: none;
+	transition: 0.35s;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.service-card h3 {
+	margin-bottom: 10px;
+	color: #00eaff;
+}
+
+.service-card p {
+	opacity: 0.8;
+	font-size: 15px;
+}
+
+/* Ціна */
+.service-card .price {
+	margin-top: 15px;
+	font-weight: bold;
+	color: #00ffaa;
+}
+
+/* Ховер ефект */
+.service-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+	border-color: rgba(0, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.07);
+}
+
+/* === Великі картки послуг === */
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.service-card-big {
+	background: #1a1a1a;
+	border: 1px solid rgba(0, 255, 255, 0.15);
+	border-radius: 20px;
+	padding: 35px 25px;
+	text-align: center;
+	transition: all 0.4s ease;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-card-big:hover {
+	transform: translateY(-12px);
+	border-color: #00d8ff;
+	box-shadow: 0 20px 40px rgba(0, 216, 255, 0.25);
+	background: #0f1f26;
+}
+
+.service-card-big .icon {
+	font-size: 4rem;
+	margin-bottom: 20px;
+}
+
+.service-card-big h3 {
+	color: #00eaff;
+	margin: 15px 0;
+	font-size: 1.5em;
+}
+
+.service-card-big p {
+	color: #ccc;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.service-card-big .price {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #00ffaa;
+	margin: 15px 0;
+}
+
+.service-card-big .btn {
+	margin-top: 20px;
+	padding: 14px 30px;
+	font-size: 1.1em;
+}
+
+.team-img {
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	border-radius: 12px;
+}
+
+/* Блок відгуків (слайдер) */
+.reviews-slider {
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	padding: 50px 30px;
+	background: #1a1a1a;
+	border-radius: 20px;
+	border: 1px solid rgba(0, 255, 255, 0.15);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.review {
+	font-size: 1.35em;
+	line-height: 1.7;
+	color: #eee;
+	display: none;
+	animation: fadeIn 1s ease-in-out;
+}
+
+.review.active {
+	display: block;
+}
+
+.review strong {
+	display: block;
+	margin-top: 25px;
+	color: #00ffaa;
+	font-size: 1.15em;
+	font-weight: 600;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* FAQ */
+.faq {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+/* ========= FAQ — 100% робочі стилі (2025) ========= */
+.faq-container {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+.faq-item {
+	background: #131313;
+	border-radius: 16px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	transition: all 0.4s ease;
+}
+
+.faq-item:hover {
+	border-color: #00d8ff;
+}
+
+.faq-question {
+	padding: 22px 25px;
+	cursor: pointer;
+	color: #00eaff;
+	font-size: 1.25em;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	user-select: none;
+	position: relative;
+}
+
+.faq-arrow {
+	font-size: 1.4em;
+	transition: transform 0.4s ease;
+}
+
+.faq-item.active .faq-arrow {
+	transform: rotate(180deg);
+}
+
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 25px;
+	color: #ccc;
+	line-height: 1.7;
+	transition: max-height 0.6s ease, padding 0.6s ease;
+}
+
+.faq-item.active .faq-answer {
+	max-height: 300px;
+	/* достатньо для будь-якого тексту */
+	padding: 0 25px 25px 25px;
+}
+
+/* FAQ на чистому HTML5 <details> — працює завжди */
+.faq-simple {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+.faq-item {
+	background: #131313;
+	border-radius: 16px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	border: 1px solid rgba(0, 234, 255, 0.15);
+}
+
+.faq-item summary {
+	padding: 22px 50px 22px 25px;
+	color: #00eaff;
+	font-size: 1.25em;
+	font-weight: 600;
+	cursor: pointer;
+	list-style: none;
+	position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+	display: none;
+}
+
+.faq-item summary::after {
+	content: "▼";
+	position: absolute;
+	right: 25px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1.4em;
+	color: #00d8ff;
+	transition: 0.3s;
+}
+
+.faq-item[open] summary::after {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-content {
+	padding: 0 25px 25px;
+	color: #ccc;
+	line-height: 1.7;
+	border-top: 1px solid #333;
+	margin-top: 10px;
+}
+
+/* ==================================================== */
+/* Адаптивність для мобілок */
+@media (max-width: 768px) {
+	.team {
+		gap: 25px;
+	}
+
+	.team-member {
+		width: 260px;
+	}
+
+	.reviews-slider {
+		padding: 40px 20px;
+	}
+
+	.review {
+		font-size: 1.2em;
+	}
+
+	.faq-item h3 {
+		font-size: 1.15em;
+		padding-right: 40px;
+	}
+
+	.review p::before {
+		content: '“';
+		font-size: 3em;
+		color: #00d8ff;
+		float: left;
+		margin: -10px 10px 0 -10px;
+		line-height: 1;
+	}
+
+	.review p::after {
+		content: '”';
+		font-size: 3em;
+		color: #00d8ff;
+		float: right;
+		margin: -20px -10px 0 10px;
+		line-height: 1;
+	}
+
+	/* Ховер-ефект для карток аналізів (inline-стилі + доповнення) */
+	a>div:hover {
+		transform: translateY(-18px) !important;
+		border-color: #00d8ff !important;
+		box-shadow: 0 30px 60px rgba(0, 216, 255, 0.35) !important;
+	}
+
+	footer a:hover {
+		color: #00ffaa !important;
+		transform: scale(1.05);
+		display: inline-block;
+	}
+
+	footer a {
+		transition: all .3s;
+	}
+
+	/* Ховер для карток переваг + підсвічування емодзі */
+	section>div>div:hover {
+		transform: translateY(-25px) !important;
+		border-color: #00d8ff !important;
+		box-shadow: 0 40px 80px rgba(0, 216, 255, 0.5) !important;
+	}
+
+	section>div>div div:first-child {
+		filter: drop-shadow(0 0 10px rgba(0, 216, 255, 0.6));
+		transition: filter 0.3s;
+	}
+
+	section>div>div:hover div:first-child {
+		filter: drop-shadow(0 0 20px rgba(0, 216, 255, 0.8));
+	}
+
+	/* Ховер для всіх карток */
+	section a>div:hover {
+		transform: translateY(-28px);
+		border-color: #00d8ff !important;
+		box-shadow: 0 45px 90px rgba(0, 216, 255, 0.6) !important;
+	}
+
+	section a>div svg {
+		transition: all 0.4s;
+	}
+
+	section a>div:hover svg {
+		stroke: #00ffaa;
+		filter: drop-shadow(0 0 20px #00ffaa);
+	}
+}

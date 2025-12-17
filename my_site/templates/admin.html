@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Адмін-панель | LabHealth{% endblock %}
+
+{% block content %}
+<section style="padding:100px 20px; background:#121212; min-height:100vh;">
+	<div style="max-width:1200px; margin:0 auto;">
+		<h1 style="color:#00eaff; font-size:3.5em; text-align:center; margin-bottom:60px;">
+			Адмін-панель
+		</h1>
+
+		<!-- ========================== ЗАПИСИ ========================== -->
+		<h2 style="color:#00eaff; margin-bottom:20px;">🧪 Підтвердження результатів</h2>
+
+		{% if appointments %}
+		<div style="display:grid; gap:30px;">
+			{% for item in appointments %}
+			<div
+				style="background:#1a1a1a; padding:40px; border-radius:32px; border-left:8px solid #ffaa00; box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+
+				<div style="display:flex; justify-content:space-between; align-items:start; gap:30px;">
+					<div style="flex:1;">
+						<h3 style="color:#00eaff; font-size:1.8em; margin:0 0 10px;">
+							{{ item.name }} ({{ item.email }})
+						</h3>
+						<p style="color:#00d8ff; font-size:1.4em; margin:8px 0;">
+							{{ item.apt.service }} • {{ item.apt.doctor }}
+						</p>
+						<p style="color:#aaa; margin:8px 0;">
+							{{ item.apt.date }} о {{ item.apt.time }}
+						</p>
+					</div>
+
+					<div style="min-width:400px; text-align:right;">
+						{% if item.apt.status == 'Готово' %}
+						<div
+							style="background:#00ffaa; color:#121212; padding:14px 35px; border-radius:50px; font-weight:700; text-align:center; margin-bottom:15px;">
+							Результат готовий
+						</div>
+						<p style="color:#00ffaa; font-size:1.2em; text-align:center;">
+							{{ item.apt.result_text|default("Результат введено") }}
+						</p>
+						{% else %}
+						<form action="/admin/confirm/{{ item.apt_id }}" method="post">
+							<textarea name="result_text" placeholder="Введіть результат аналізу..." required
+								style="width:100%; height:120px; padding:16px; border-radius:16px; background:#2c2c2c; color:#eee; border:none; margin-bottom:15px; font-size:1.1em; resize:vertical;"></textarea>
+
+							<button type="submit"
+								style="width:100%; padding:18px; background:#00ffaa; color:#121212; border:none; border-radius:60px; font-size:1.4em; font-weight:700;">
+								Підтвердити та зберегти результат
+							</button>
+						</form>
+						{% endif %}
+					</div>
+				</div>
+
+			</div>
+			{% endfor %}
+		</div>
+		{% else %}
+		<p style="text-align:center; color:#777; font-size:1.8em;">Записів немає</p>
+		{% endif %}
+
+		<!-- ========================== ПОВІДОМЛЕННЯ ========================== -->
+
+		<h2 style="color:#00eaff; margin-top:80px; margin-bottom:20px;">📩 Повідомлення користувачів</h2>
+
+		{% if messages %}
+		<div style="display:grid; gap:30px;">
+
+			{% for m in messages %}
+			<div
+				style="background:#1a1a1a; padding:40px; border-radius:32px; border-left:8px solid #00d8ff; box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+
+				<h3 style="color:#00eaff; font-size:1.6em; margin-bottom:10px;">
+					{{ m.name }} ({{ m.email }})
+				</h3>
+
+				<p style="color:#bbb; margin-bottom:20px; font-size:1.2em;">
+					{{ m.message }}
+				</p>
+
+				{% if m.reply %}
+				<div style="background:#0f331c; padding:20px; border-radius:16px; border:2px solid #00ffaa;">
+					<p style="color:#00ffaa; margin:0; font-size:1.2em;"><strong>Ваша відповідь:</strong></p>
+					<p style="color:#ccffdd; margin-top:10px; font-size:1.1em;">{{ m.reply }}</p>
+				</div>
+				{% else %}
+				<form action="/admin/reply/{{ m.id }}" method="post" style="margin-top:20px;">
+					<textarea name="reply" placeholder="Введіть відповідь..."
+						style="width:100%; height:120px; padding:16px; background:#2c2c2c; color:#eee; border:none; border-radius:16px; margin-bottom:15px;"></textarea>
+
+					<button
+						style="width:100%; padding:18px; background:#00ffaa; color:#121212; border:none; border-radius:60px; font-size:1.3em; font-weight:700;">
+						Надіслати відповідь
+					</button>
+				</form>
+				{% endif %}
+
+			</div>
+			{% endfor %}
+
+		</div>
+		{% else %}
+		<p style="text-align:center; color:#777; font-size:1.6em;">Повідомлень немає</p>
+		{% endif %}
+
+
+		<div style="text-align:center; margin-top:80px;">
+			<a href="/" style="color:#00d8ff; font-size:1.3em; text-decoration:underline;">На головну</a>
+		</div>
+	</div>
+</section>
+{% endblock %}

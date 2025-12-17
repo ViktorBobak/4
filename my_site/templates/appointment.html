@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Онлайн-запис | LabHealth{% endblock %}
+
+{% block content %}
+<section style="padding:140px 20px; background:#121212;">
+	<div style="max-width:700px; margin:0 auto; text-align:center;">
+
+		<h1 style="color:#00eaff; font-size:3.5em; margin-bottom:20px;">
+			Онлайн-запис
+		</h1>
+
+		<div style="background:#1a1a1a; padding:60px; border-radius:32px; box-shadow:0 30px 80px rgba(0,216,255,0.4);">
+
+			<form method="POST">
+				<div style="margin-bottom:30px;">
+					<label style="color:#eee; font-size:1.4em; display:block; margin-bottom:15px;">Оберіть
+						аналіз</label>
+					<select name="service" required
+						style="width:100%; padding:18px; border-radius:16px; background:#2c2c2c; color:#eee; font-size:1.2em;">
+						{% for service in services %}
+						<option value="{{ service }}" {% if service==selected_service %}selected{% endif %}>
+							{{ service }}
+						</option>
+						{% endfor %}
+					</select>
+				</div>
+
+				<div style="margin-bottom:30px;">
+					<label style="color:#eee; font-size:1.4em; display:block; margin-bottom:15px;">Оберіть
+						лікаря</label>
+					<select name="doctor" required
+						style="width:100%; padding:18px; border-radius:16px; background:#2c2c2c; color:#eee; font-size:1.2em;">
+						{% for doc in doctors %}
+						<option value="{{ doc }}">{{ doc }}</option>
+						{% endfor %}
+					</select>
+				</div>
+
+				<div style="margin-bottom:30px;">
+					<label style="color:#eee; font-size:1.4em; display:block; margin-bottom:15px;">Дата</label>
+					<input type="date" name="date" required
+						style="width:100%; padding:18px; border-radius:16px; background:#2c2c2c; color:#eee; font-size:1.2em;">
+				</div>
+
+				<div style="margin-bottom:40px;">
+					<label style="color:#eee; font-size:1.4em; display:block; margin-bottom:15px;">Час</label>
+					<input type="time" name="time" required
+						style="width:100%; padding:18px; border-radius:16px; background:#2c2c2c; color:#eee; font-size:1.2em;">
+				</div>
+
+				<button type="submit"
+					style="width:100%; padding:22px; background:#00ffaa; color:#121212; border:none; border-radius:60px; font-size:1.7em; font-weight:700; cursor:pointer;">
+					Записатися на прийом
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+{% endblock %}

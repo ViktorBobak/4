@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Медична лабораторія{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<h1>LabHealth</h1>
+			<nav>
+				<a href="/">Головна</a>
+				<a href="/about">Про нас</a>
+				<a href="/services">Послуги</a>
+				<a href="/contact">Контакти</a>
+				<a href="/appointment">Онлайн-запис</a>
+				{% if session.user_email %}
+				<a href="/profile">Кабінет ({{ session.user_name }})</a>
+				<a href="/logout">Вийти</a>
+				{% else %}
+				<a href="/login">Вхід</a>
+				<a href="/register">Реєстрація</a>
+				{% endif %}
+			</nav>
+
+		</div>
+	</header>
+
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer
+		style="margin-top:120px; padding:70px 20px 40px; background:linear-gradient(to bottom, transparent, #0a0a0a); position:relative;">
+		<!-- Градієнтна лінія зверху -->
+		<div
+			style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, #00d8ff, #00ffaa, #00d8ff);">
+		</div>
+
+		<div
+			style="max-width:1400px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:40px; color:#bbb;">
+
+			<!-- Ліворуч: логотип + слоган + копірайт -->
+			<div style="text-align:left;">
+				<h2 style="color:#00d8ff; margin:0 0 10px; font-size:2.3em; font-weight:700; letter-spacing:-1px;">
+					LabHealth
+				</h2>
+				<p style="margin:0 0 8px; color:#00ffaa; font-size:1.1em; font-weight:500;">
+					Точність. Швидкість. Довіра.
+				</p>
+				<p style="margin:0; color:#666; font-size:0.95em;">
+					© 2025 LabHealth. Всі права захищені.
+				</p>
+			</div>
+
+			<!-- Праворуч: контакти -->
+			<div style="text-align:right;">
+				<div style="margin-bottom:12px;">
+					<strong style="color:#00eaff;">Телефон:</strong>
+					<a href="tel:+380991234567"
+						style="margin-left:12px; color:#00ffaa; font-size:1.4em; font-weight:700; text-decoration:none;">
+						+38 (099) 123-45-67
+					</a>
+				</div>
+				<div>
+					<strong style="color:#00eaff;">Email:</strong>
+					<a href="mailto:info@labhealth.ua" style="margin-left:12px; color:#00d8ff; text-decoration:none;">
+						info@labhealth.ua
+					</a>
+				</div>
+				<div style="margin-top:15px; font-size:0.9em; color:#777;">
+					Пн–Пт: 07:00–19:00 • Сб–Нд: 08:00–16:00
+				</div>
+			</div>
+		</div>
+
+		<!-- Додаткова смужка знизу (опціонально) -->
+		<div style="margin-top:50px; text-align:center; color:#555; font-size:0.85em;">
+			З любов’ю до вашого здоров’я ❤️
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Вхід{% endblock %}
+{% block content %}
+<div style="max-width:500px;margin:100px auto;padding:60px;background:#1a1a1a;border-radius:32px;text-align:center;">
+	<h2 style="color:#00eaff;font-size:2.8em;margin-bottom:30px;">Вхід</h2>
+	<form method="post">
+		<input name="email" type="email" placeholder="Email" required
+			style="width:100%;padding:18px;margin:15px 0;border-radius:16px;background:#2c2c2c;color:#eee;border:none;font-size:1.2em;">
+		<input name="password" type="password" placeholder="Пароль" required
+			style="width:100%;padding:18px;margin:15px 0;border-radius:16px;background:#2c2c2c;color:#eee;border:none;font-size:1.2em;">
+		<button type="submit"
+			style="width:100%;padding:20px;background:#00ffaa;color:#121212;border:none;border-radius:60px;font-size:1.5em;margin-top:20px;cursor:pointer;">
+			Увійти
+		</button>
+	</form>
+	<p style="margin-top:30px;color:#888;">Немає акаунту? <a href="/register" style="color:#00d8ff;">Зареєструватися</a>
+	</p>
+</div>
+{% endblock %}
